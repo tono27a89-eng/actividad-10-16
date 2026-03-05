@@ -18,8 +18,7 @@ namespace actividad_10_16
             do
             {
                 Console.WriteLine("1. ingresar estudiante");
-                Console.WriteLine("2. modificar");
-                Console.WriteLine("3. ver empleados");
+                Console.WriteLine("2. ver estudiantes");
                 Console.WriteLine("0. salir");
                 int.TryParse(Console.ReadLine(), out opcion);
                 switch (opcion)
@@ -31,53 +30,38 @@ namespace actividad_10_16
                         {
 
 
-                            Console.WriteLine($"Ingrese Id de empleado");
-                            int.TryParse(Console.ReadLine(), out ID);
-                            if (empleado.ContainsKey(ID))
+                            Console.WriteLine($"Ingrese carne de estudiante");
+                            int.TryParse(Console.ReadLine(), out id);
+                            if (estudiantes.ContainsKey(id))
                             {
-                                Console.WriteLine("nombre ya ingresado ingrese otro");
+                                Console.WriteLine("carne ya existente");
                                 i--;
                             }
                             else
                             {
                                 Console.WriteLine("ingrese nombre:");
                                 nombre = Console.ReadLine();
-                                empleado.Add(ID, nombre);
+                                estudiantes.Add(id, nombre);
 
                             }
                         }
                         break;
                     case 2:
-                        Console.WriteLine("ingrese el ID que desea modificar");
-                        int.TryParse(Console.ReadLine(), out ID);
-                        if (empleado.ContainsKey(ID))
+                        foreach (var item in estudiantes)
                         {
-                            Console.WriteLine("ingrese nuevo nombre: ");
-                            nombre = Console.ReadLine();
-                            empleado[ID] = nombre;
-                        }
-                        else
-                        {
-                            Console.WriteLine("ID no encontrado");
+                            Console.WriteLine(" el carne: " + item.Key + " estudainte: " + item.Value);
                         }
 
                         break;
-                    case 3:
-                        foreach (var item in empleado)
-                        {
-                            Console.WriteLine(" el ID: " + item.Key + " empleado: " + item.Value);
-                        }
-                        break;
-                    case 0:
-                        validar = true;
-                        break;
+                    
+                   
                     default:
                         Console.WriteLine("ingrese valor valido");
                         break;
                 }
 
             }
-            while (validar != true);
+            while (opcion!=0);
             Console.WriteLine("hasta luego");
 
 
