@@ -24,7 +24,7 @@ namespace actividad_10_16
                 switch (opcion)
                 {
                     case 1:
-                        Console.WriteLine("ingrese cantidad de empleados que desae ingresar: ");
+                        Console.WriteLine("ingrese cantidad de estudiantes que desae ingresar: ");
                         int.TryParse(Console.ReadLine(), out int lim);
                         for (int i = 0; i < lim; i++)
                         {
