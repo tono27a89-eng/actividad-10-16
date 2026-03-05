@@ -11,9 +11,13 @@ namespace actividad_10_16
         static void Main(string[] args)
         {
             Console.WriteLine("Desarrolle un programa con menú que permita agregar y mostrar estudiantes usando un Dictionary.");
+            Dictionary<int, string>estudiantes=new Dictionary<int, string>();
+            int id;
+            string nombre;
+            int opcion;
             do
             {
-                Console.WriteLine("1. ingresar empleado");
+                Console.WriteLine("1. ingresar estudiante");
                 Console.WriteLine("2. modificar");
                 Console.WriteLine("3. ver empleados");
                 Console.WriteLine("0. salir");
