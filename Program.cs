@@ -49,7 +49,7 @@ namespace actividad_10_16
                     case 2:
                         foreach (var item in estudiantes)
                         {
-                            Console.WriteLine(" el carne: " + item.Key + " estudainte: " + item.Value);
+                            Console.WriteLine(" el carne: " + item.Key + " estudiante: " + item.Value);
                         }
 
                         break;
